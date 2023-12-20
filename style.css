@@ -132,6 +132,11 @@ header .socials a:hover{
     body{
         padding: 0;
     }
+    section {
+        overflow-y: auto;
+        max-height: calc(100vh - 8rem); /* Adjust this value as needed */
+    }
+
 
     #menu-bars{
         display: initial;
