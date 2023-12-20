@@ -155,10 +155,13 @@ header .socials a:hover{
    
 }
 
+
+
 @media (max-width: 450px){
     html{
         font-size: 50%;
     }
+    
     header{
         width:100%;
     }
@@ -264,4 +267,73 @@ header .socials a:hover{
     padding-bottom: 1rem;
     color: #111;
     text-transform: uppercase;
+}
+
+.skill-table{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+
+}
+#skillLabel{
+    font-size: 2rem;
+    color: #111;
+    text-transform: initial;
+    
+}
+.skill-table .col-1,
+.skill-table .col-2,
+.skill-table .col-3,
+.skill-table .col-4,
+.skill-table .col-5,
+.skill-table .col-6
+ {
+    background-color: #2274A5; 
+    color: white; 
+    padding: 1rem; 
+    margin-bottom: 0.5rem; 
+    border: 1px solid white; 
+    border-radius: 0.5rem;
+}
+
+
+
+/* Hover skill-table */
+.skill-table .col-1:hover,
+.skill-table .col-2:hover,
+.skill-table .col-3:hover,
+.skill-table .col-4:hover,
+.skill-table .col-5:hover,
+.skill-table .col-6:hover {
+    background-color: #14548c;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .skill-table {
+        grid-template-columns: repeat(2, 1fr); 
+
+    }
+    .skill-table .col-1,
+    .skill-table .col-2,
+    .skill-table .col-3,
+    .skill-table .col-4,
+    .skill-table .col-5,
+    .skill-table .col-6 {
+        width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 1rem;/
+    }
+}
+
+.skillOne::after,
+.skillTwo::after,
+.skillThree::after,
+.skillFour::after,
+.skillFive::after {
+    content: '';
+    display: block;
+    border-top: 1px solid var(--main-color); /* Change the color as needed */
+    margin-top: 1rem;
+    width: 100%; 
+    margin-bottom: 1rem;
 }
