@@ -337,3 +337,7 @@ header .socials a:hover{
     width: 100%; 
     margin-bottom: 1rem;
 }
+
+.projects{
+    min-height: 100vh;
+}
