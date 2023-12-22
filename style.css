@@ -443,6 +443,7 @@ header .socials a:hover{
     margin-bottom: 1rem;
     border-radius: 1rem;
     margin-top: 1rem;
+    text-transform: initial;
 
 }
 
