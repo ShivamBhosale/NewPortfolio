@@ -338,6 +338,327 @@ header .socials a:hover{
     margin-bottom: 1rem;
 }
 
-.projects{
+
+.projects {
     min-height: 100vh;
 }
+
+.projects-name {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-bottom: 1rem;
+
+    
+}
+
+.projects-name .front{
+    background-color: #2274A5; 
+    color: white; 
+    padding: 1rem; 
+    margin-bottom: 0.5rem; 
+    border: 1px solid white; 
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+.projects-name .back{
+    background-color: #2274A5; 
+    color: white; 
+    padding: 1rem; 
+    margin-bottom: 0.5rem; 
+    border: 1px solid white; 
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.contact{
+    min-height: 100vh;
+}
+
+.contact .heading{
+    font-size:4rem;
+    padding-bottom: 1rem;
+    color: #111;
+    text-transform: uppercase;
+}
+
+.contact .icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+}
+
+
+.contact .icons-container .icons{
+    flex: 1 1 20rem;
+    padding: 1rem;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact .icons-container .icons i{
+    color: var(--main-color);
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact .row form{
+    flex: 1 1 55rem;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+    border-radius: 1rem;
+    padding: 0 2rem;
+}
+
+.contact .row .map{
+    flex: 1 1 25rem;
+    border:1rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+    border-radius: 1rem;
+    width: 100%;
+}
+.contact .row form .box, .contact .row form textarea{
+    width: 100%;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background: #f5f5f5;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+}
+
+.contact .row form .box:focus, .contact .row form textarea:focus{
+    border: 2px solid var(--main-color);
+}
+
+.contact .row form .box::placeholder, .contact .row form textarea::placeholder{
+   text-transform: capitalize;
+    font-size: 1.5rem;
+}
+.contact .row form .btn{
+    background: var(--main-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#mail{
+    text-transform: lowercase;
+}
+
+/*
+
+html,
+body {
+
+}
+
+/* ...............................................................
+/* ............................................................... */
+/* ............................................................... 
+#retrobg {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  color: #a3c;
+  background-color: #000;
+}
+
+/* ............................................................... 
+#retrobg-sky {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient( #214 75%, #249 );
+}
+
+/* ............................................................... 
+#retrobg-sunWrap {
+  position: relative;
+  width: 40%;
+  margin-bottom: -15%;
+}
+#retrobg-sun {
+  --glow-color: #d44;
+  padding-top: 100%;
+  border-radius: 50%;
+  background-image: linear-gradient( #fcdf11, #ff623f, #fe2085 50% );
+  box-shadow: 0 0 160px 80px var( --glow-color );
+  animation: 2s ease infinite alternate retrobg-sun-glow-anim;
+}
+.retrobg-shutdown #retrobg-sun {
+  background-image: linear-gradient( #000, #000 40% );
+  --glow-color: #000;
+}
+@keyframes retrobg-sun-glow-anim {
+  from { box-shadow: 0 0 160px 80px var( --glow-color ); }
+  to   { box-shadow: 0 0 200px 95px var( --glow-color ); }
+}
+
+/* ............................................................... 
+#retrobg-stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.retrobg-star {
+  position: absolute;
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+}
+
+/* ............................................................... 
+#retrobg-mountains {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+}
+.retrobg-mountain {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-image: linear-gradient( #000 70%, #111 85%, #fff1 );
+}
+#retrobg-mountains-left { left: 0; clip-path: polygon( 0% 100%,0% 55%,5% 60%,10% 55%,20% 50%,25% 42%,30% 38%,33% 35%,40% 45%,50% 50%,60% 70%,70% 85%,75% 82%,80% 91%,85% 90%,90% 95%,95% 98%,100% 100% ); }
+#retrobg-mountains-right { right: 0; clip-path: polygon( 0% 100%,5% 95%,10% 85%,15% 87%,20% 80%,25% 78%,30% 65%,40% 70%,50% 57%,60% 53%,67% 68%,70% 70%,75% 66%,80% 55%,90% 50%,95% 60%,100% 57%,100% 100% ); }
+
+/* ............................................................... 
+#retrobg-cityWrap {
+  position: absolute;
+  width: 50%;
+  margin-left: -1%;
+}
+#retrobg-city {
+  padding-top: 20%;
+}
+.retrobg-building {
+  position: absolute;
+  width: 5%;
+  height: 100%;
+  bottom: 0;
+  border-radius: 4px 4px 0 0;
+  background-image: linear-gradient( 0deg, rgba( 17, 17, 34, 0 ), #112 30px, #000 );
+}
+.retrobg-building:nth-child( odd ) {
+  background-image: linear-gradient( 0deg, rgba( 24, 24, 42, 0 ), #223 30px, #000 );
+}
+.retrobg-antenna::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: calc( -1px - 5% );
+  bottom: 100%;
+  width: 10%;
+  min-width: 2px;
+  height: 33%;
+  background-color: #000;
+}
+
+/* ............................................................... 
+#retrobg-ground {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 45%;
+  bottom: 0;
+  border-top: 2px solid #bf578c;
+  background-color: #000;
+}
+.retrobg-shutdown #retrobg-ground {
+  border-color: #000;
+}
+#retrobg-groundShadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient( #000 0%, transparent );
+}
+
+/* ............................................................... 
+#retrobg-linesWrap {
+  height: 100%;
+  perspective: 1000px;
+  perspective-origin: center top;
+}
+#retrobg-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: top center;
+  animation: .35s linear infinite retrobg-lines-anim;
+}
+.retrobg-shutdown #retrobg-lines {
+  animation-duration: 5s;
+}
+@keyframes retrobg-lines-anim {
+  from { transform: rotateX( 84deg ) translateY( 0 ); }
+  to { transform: rotateX( 84deg ) translateY( 100px ); }
+}
+#retrobg-hlines,
+#retrobg-vlines {
+  position: absolute;
+  left: calc( ( 900% - 100% ) / -2 );
+  width: 900%;
+  height: 500%;
+}
+#retrobg-vlines {
+  display: flex;
+  justify-content: center;
+}
+.retrobg-hline,
+.retrobg-vline {
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+}
+.retrobg-hline { height: 3px; }
+.retrobg-vline { width: 3px; }
+.retrobg-hline + .retrobg-hline { margin-top: 98px; }
+.retrobg-vline + .retrobg-vline { margin-left: 48px; }
+
+
+
+.retro-bg {
+    position: relative;
+    overflow: hidden;
+    color: #a3c;
+    background-color: #000;
+}
+
+/* Apply the retro-bg class to all divs and sections *
+.retro-bg div, .retro-bg section {
+    background: inherit;
+}
+
+*/
